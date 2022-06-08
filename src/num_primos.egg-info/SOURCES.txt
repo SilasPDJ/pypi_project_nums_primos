@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/num_primos/__init__.py
+src/num_primos.egg-info/PKG-INFO
+src/num_primos.egg-info/SOURCES.txt
+src/num_primos.egg-info/dependency_links.txt
+src/num_primos.egg-info/top_level.txt
