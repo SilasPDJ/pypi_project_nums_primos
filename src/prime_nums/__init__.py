@@ -1,3 +1,5 @@
+from numpy import prod
+
 def is_prime(num: int) -> bool:
     """
     :num: if number is prime
@@ -33,5 +35,24 @@ def get_prime_nums(qt_primes: int, start: int = 2, max_num: int = 0) -> list:
         # print(primes)
     return primes
 
+def get_gcd(*nums):
+    """
+    :nums: 
+    """
+    # MDC
+    def same_divisor(prmn) -> bool:
+        # prmn = prime_num
+        if not is_prime(prmn):
+            pass
+        for n in nums:
+            if not n % prmn == 0:
+                break
+        else:
+            yield prmn
+    resp = [r for _val in range(2, int(max(nums)/2))
+            for r in same_divisor(_val)]
+    # mults = map(is_prime, resp)
+    mults = filter(is_prime, resp)
+    mults = list(mults)
 
-# p(a)
+    return prod(mults)
